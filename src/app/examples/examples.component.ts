@@ -20,6 +20,19 @@ export class ExamplesComponent {
       approach: 'combineLatest + aync pipe'
     },
     {
+      scenario: 'using Http to validate form input',
+      source: 'HttpClient',
+      destination: 'template',
+      approach: 'return observable in custom async validator'
+    },
+    {
+      scenario: 'API data is needed for two very different computations',
+      source: 'HttpClient',
+      destination: 'template',
+      approach:
+        'store http observable with .share() to a variable, create two different .pipe() computations from http result'
+    },
+    {
       scenario: 'combining results from multiple API calls',
       source: 'HttpClient',
       destination: 'template',
@@ -38,6 +51,12 @@ export class ExamplesComponent {
       approach: '*ngIf with async as or smart/view component pattern'
     },
     {
+      scenario: 'displaying streaming data with websockets',
+      source: 'manually created from RXJS',
+      destination: 'template',
+      approach: 'async pipe'
+    },
+    {
       scenario: 'performing auth lookup for routing',
       source: 'HttpClient',
       destination: 'canActivate',
@@ -50,15 +69,15 @@ export class ExamplesComponent {
       approach: 'toPromise'
     },
     {
-      scenario: 'fetching data from ngrx store',
-      source: 'NGRX',
+      scenario: 'fetching data from NgRx store',
+      source: 'NgRx',
       destination: 'template',
       approach: 'async pipe'
     },
     {
-      scenario: 'setting up effects in NGRX',
+      scenario: 'setting up effects in NgRx',
       source: 'Actions (usually)',
-      destination: 'NGRX effects',
+      destination: 'NgRx effects',
       approach: 'EffectsModule.run()'
     },
     {
