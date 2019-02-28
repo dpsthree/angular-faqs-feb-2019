@@ -1,17 +1,30 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SubscribeDemoComponent } from './subscribe-demo.component';
-import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import {
+  MatFormFieldModule,
+  MatInputModule,
+  MatListModule
+} from '@angular/material';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', component: SubscribeDemoComponent }
-];
+import { SubscribeDemoComponent } from './subscribe-demo.component';
+import { SubscribeService } from './subscribe.service';
+
+const routes: Routes = [{ path: '', component: SubscribeDemoComponent }];
 
 @NgModule({
   declarations: [SubscribeDemoComponent],
   imports: [
     CommonModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes)
-  ]
+  ],
+  providers: [SubscribeService]
 })
-export class SubscribeDemoModule { }
+export class SubscribeDemoModule {}
