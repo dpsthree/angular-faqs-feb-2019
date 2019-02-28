@@ -45,12 +45,6 @@ export class SubscribeDemoComponent {
       })
     );
 
-    this.filterControl.valueChanges.subscribe(term =>
-      this.router.navigate([], { queryParams: { term } })
-    );
-
-    this.activatedRoute.queryParams
-      .pipe(pluck('term'))
-      .subscribe(term => this.filterControl.setValue(term));
+    // TODO: sync with the URL
   }
 }

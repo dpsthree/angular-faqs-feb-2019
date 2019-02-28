@@ -25,10 +25,6 @@ export class TopromiseDemoComponent {
   }
 
   createUser() {
-    this.service
-      .addUser(this.userForm.value)
-      .toPromise()
-      .then(() => this.snackBar.open('User created!', 'dismiss'))
-      .then(() => (this.users = this.service.getUsers()));
+    // TODO: implement me
   }
 }
