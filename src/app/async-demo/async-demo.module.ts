@@ -1,14 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AsyncDemoComponent } from './async-demo.component';
-import { Routes, RouterModule } from '@angular/router';
-import { MatGridListModule, MatCardModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { MatCardModule, MatGridListModule } from '@angular/material';
+import { RouterModule, Routes } from '@angular/router';
+
+import { AsyncDemoComponent } from './async-demo.component';
 import { AsyncService } from './async.service';
 
-const routes: Routes = [{
-  path: '', component: AsyncDemoComponent
-}];
+const routes: Routes = [
+  {
+    path: '',
+    component: AsyncDemoComponent
+  }
+];
 
 @NgModule({
   declarations: [AsyncDemoComponent],
@@ -21,4 +25,4 @@ const routes: Routes = [{
     MatCardModule
   ]
 })
-export class AsyncDemoModule { }
+export class AsyncDemoModule {}
