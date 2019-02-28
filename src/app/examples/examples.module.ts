@@ -1,18 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExamplesComponent } from './examples.component';
+import { NgModule } from '@angular/core';
+import { MatTableModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+
+import { ExamplesComponent } from './examples.component';
 
 const routes: Routes = [
   {
-    path: '', component: ExamplesComponent
+    path: '',
+    component: ExamplesComponent
   }
-]
+];
 @NgModule({
   declarations: [ExamplesComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ]
+  imports: [CommonModule, MatTableModule, RouterModule.forChild(routes)]
 })
-export class ExamplesModule { }
+export class ExamplesModule {}
