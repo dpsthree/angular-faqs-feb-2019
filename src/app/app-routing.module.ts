@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { IntroComponent } from './intro/intro.component';
 
 const routes: Routes = [
@@ -9,19 +10,23 @@ const routes: Routes = [
   },
   {
     path: 'async',
-    loadChildren: './async-demo/async-demo.module#AsyncDemoModule'
+    loadChildren: () =>
+      import('./async-demo/async-demo.module').then(m => m.AsyncDemoModule)
   },
   {
     path: 'topromise',
-    loadChildren: './topromise-demo/topromise-demo.module#TopromiseDemoModule'
+    loadChildren: () =>
+      import('./topromise-demo/topromise-demo.module').then(m => m.TopromiseDemoModule)
   },
   {
     path: 'subscribe',
-    loadChildren: './subscribe-demo/subscribe-demo.module#SubscribeDemoModule'
+    loadChildren: () =>
+      import('./subscribe-demo/subscribe-demo.module').then(m => m.SubscribeDemoModule)
   },
   {
     path: 'examples',
-    loadChildren: './examples/examples.module#ExamplesModule'
+    loadChildren: () =>
+      import('./examples/examples.module').then(m => m.ExamplesModule)
   }
 ];
 

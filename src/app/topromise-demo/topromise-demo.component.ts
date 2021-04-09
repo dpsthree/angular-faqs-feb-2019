@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 
 import { TopromiseService, User } from './topromise.service';
@@ -16,7 +16,7 @@ export class TopromiseDemoComponent {
     lastName: new FormControl()
   });
 
-  users: Observable<User>;
+  users: Observable<User[]>;
   constructor(
     private service: TopromiseService,
     private snackBar: MatSnackBar
