@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatGridListModule } from '@angular/material';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AsyncDemoComponent } from './async-demo.component';

@@ -2,11 +2,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import {
-  MatFormFieldModule,
-  MatInputModule,
-  MatListModule
-} from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SubscribeDemoComponent } from './subscribe-demo.component';
